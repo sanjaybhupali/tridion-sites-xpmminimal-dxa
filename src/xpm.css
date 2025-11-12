@@ -1,0 +1,93 @@
+a.xpm-highlight{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 999;
+    cursor: pointer;
+    border: 0px;
+    background: #007373;
+	color:#fff;
+    padding: 10px;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	opacity:0
+}
+
+
+a.xpm-highlight span{
+    color:#ffffff;
+    font-size: 16px;
+}
+body[data-page-id]:hover > a.xpm-highlight,
+main[data-page-id]:hover > a.xpm-highlight,
+div[data-page-id]:hover > a.xpm-highlight,
+div[data-component-id]:hover a.xpm-highlight, 
+ul[data-component-id]:hover a.xpm-highlight, 
+article[data-component-id]:hover a.xpm-highlight, 
+section[data-component-id]:hover a.xpm-highlight,
+ol[data-component-id]:hover a.xpm-highlight{
+    display: flex;
+	opacity:1
+}
+
+.pageroot > div[data-region] > div {
+	position:relative;
+}
+
+div[data-component-id].xpm:hover, 
+article[data-component-id].xpm:hover, 
+section[data-component-id].xpm:hover, 
+ul[data-component-id].xpm:hover, 
+ol[data-component-id].xpm:hover, 
+div[data-page-id].xpm:hover, 
+main[data-page-id].xpm:hover, 
+body[data-page-id].xpm:hover {
+	border: 2px solid #17c13e !important;
+    box-shadow: 0 0 0 1px #17c13e;
+}
+
+
+.headlessXpmBar {
+    background: #007373;
+    bottom: 0;
+    padding: 10px 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.headlessXpmBarContainer {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+}
+
+.headlessXpmBarButtonGroup {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.headlessXpmBarButton {
+    background: #034545;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 22px;
+    outline:1px transparent !important
+}
+
+.headlessXpmBarButton:hover, .headlessXpmBarButtonActive {
+    background: #0d5b95;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+}
