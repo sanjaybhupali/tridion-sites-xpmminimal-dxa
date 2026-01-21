@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{923B2009-9A0B-4425-88A5-BF7AF25C8F8B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sdl.Web.Mvc</RootNamespace>
+    <AssemblyName>Sdl.Web.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SdlWebDeliveryPackageVersion>11.0.1062</SdlWebDeliveryPackageVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\Sdl.Web.Mvc.XML</DocumentationFile>
+    <NoWarn>1591,1574,1570,1572,1573</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DocumentationFile>bin\Release\Sdl.Web.Mvc.xml</DocumentationFile>
+    <NoWarn>1591,1574,1570,1572,1573</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>Reference_dll\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sdl.Web.Common, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference_dll\Sdl.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sdl.Web.Delivery.ServicesCore">
+      <HintPath>Reference_dll\Sdl.Web.Delivery.ServicesCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Sdl.Web.Tridion">
+      <HintPath>Reference_dll\Sdl.Web.Tridion.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference_dll\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>Reference_dll\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\BaseAreaRegistration.cs" />
+    <Compile Include="Context\BrowserClaims.cs" />
+    <Compile Include="Context\ContextClaims.cs" />
+    <Compile Include="Context\ContextEngine.cs" />
+    <Compile Include="Context\DeviceClaims.cs" />
+    <Compile Include="Context\OperatingSystemClaims.cs" />
+    <Compile Include="Controllers\EntityController.cs" />
+    <Compile Include="Controllers\ListController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Controllers\PageController.cs" />
+    <Compile Include="Controllers\RegionController.cs" />
+    <Compile Include="Formats\FeedResult.cs" />
+    <Compile Include="Formats\FormatDataAttribute.cs" />
+    <Compile Include="Controllers\NoCacheAttribute.cs" />
+    <Compile Include="Formats\FeedFormatter.cs" />
+    <Compile Include="Formats\AtomFormatter.cs" />
+    <Compile Include="Formats\RssFormatter.cs" />
+    <Compile Include="Formats\JsonNetResult.cs" />
+    <Compile Include="Formats\JsonFormatter.cs" />
+    <Compile Include="Formats\BaseFormatter.cs" />
+    <Compile Include="Formats\DataFormatters.cs" />
+    <Compile Include="DxaViewDataItems.cs" />
+    <Compile Include="Configuration\WebRequestContext.cs" />
+    <Compile Include="Controllers\HandleSectionErrorAttribute.cs" />
+    <Compile Include="Html\BaseMediaHelper.cs" />
+    <Compile Include="Html\ContextualMediaHelper.cs" />
+    <Compile Include="Html\IMarkupDecorator.cs" />
+    <Compile Include="Html\Markup.cs" />
+    <Compile Include="Configuration\ResourceProviderFactory.cs" />
+    <Compile Include="Configuration\ResourceProvider.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Html\HtmlHelperExtensions.cs" />
+    <Compile Include="Html\UrlHelperExtensions.cs" />
+    <Compile Include="OutputCache\DXAOutputCache.cs" />
+    <Compile Include="OutputCache\DxaOutputCacheProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statics\StaticContentModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Context\ContextEngine.cd" />
+    <None Include="Controllers\Controllers.cd" />
+    <None Include="Html\MvcExtensions.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Y /I "$(TargetDir)$(TargetFileName)" "..\..\..\..\xpm-minimal-deployables\backend\bin\"
+REM Copy Views folder
+robocopy "$(ProjectDir)Reference_dll\Views" "..\..\..\..\xpm-minimal-deployables\backend\Views" /E /NFL /NDL /NJH /NJS /NC /NS
+exit 0</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
